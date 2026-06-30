@@ -1,13 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-navy: #01257D;
-  --color-brand-electric: #00FFFF;
-  --color-brand-darkBg: #0B0F19;
+  --color-brand-purple: #C5ADC5;
+  --color-brand-steel: #B2B5E0;
+  --color-brand-lightBg: #F9F8FA; /* Clean Luxury White Base */
 }
 
-body {
-  background-color: var(--color-brand-darkBg);
-  color: #FFFFFF;
+html, body {
+  background-color: #F9F8FA !important; /* Forces background to be White/Off-white */
+  color: #1A191D !important;           /* Dark text for perfect readability */
   font-family: system-ui, -apple-system, sans-serif;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+/* Elegant Light Pastel Aurora Glow in the background */
+.pastel-aurora-light {
+  background: radial-gradient(circle at 50% 50%, rgba(197, 173, 197, 0.25) 0%, rgba(178, 181, 224, 0.15) 60%, rgba(249, 248, 250, 0) 100%);
+  filter: blur(60px);
 }

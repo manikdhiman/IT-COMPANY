@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// Complete High-Fidelity Services Structure
 const finalServicesStructure = [
   {
     id: "web-dev",
@@ -84,36 +83,17 @@ export default function Services() {
 
   return (
     <section id="services" className="py-32 max-w-7xl mx-auto px-6 relative">
-      
-      {/* Dynamic Background Glow Rings */}
-      <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-brand-navy/10 blur-[150px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-brand-electric/5 blur-[120px] rounded-full pointer-events-none" />
-
-      {/* Section Typography Intro */}
       <div className="mb-20">
-        <motion.span 
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          className="text-xs font-bold tracking-widest text-brand-electric uppercase bg-brand-electric/10 px-4 py-2 rounded-full border border-brand-electric/20"
-        >
+        <span className="text-xs font-bold tracking-widest text-brand-darkText uppercase bg-brand-purple/20 px-4 py-2 rounded-full border border-brand-purple/40">
           Operational Blueprint
-        </motion.span>
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="text-4xl md:text-6xl font-black tracking-tight mt-6"
-        >
-          Engineered Services. <br />Structured for <span className="text-brand-electric">Scale</span>.
-        </motion.h2>
+        </span>
+        <h2 className="text-4xl md:text-6xl font-black tracking-tight mt-6 text-brand-darkText">
+          Engineered Services. <br />Structured for <span className="text-brand-steel">Scale</span>.
+        </h2>
       </div>
 
-      {/* Premium Horizontal Workspace Split */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start min-h-[600px]">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         
-        {/* LEFT COLUMN: Clean Navigation Control Tabs */}
         <div className="lg:col-span-4 flex flex-col gap-3">
           {finalServicesStructure.map((service) => {
             const isSelected = activeCategory === service.id;
@@ -121,23 +101,23 @@ export default function Services() {
               <button
                 key={service.id}
                 onClick={() => setActiveCategory(service.id)}
-                className={`w-full text-left p-6 rounded-xl border transition-all duration-300 relative group cursor-pointer ${
+                className={`w-full text-left p-6 rounded-xl border transition-all duration-300 relative cursor-pointer ${
                   isSelected 
-                    ? 'border-brand-electric/30 bg-brand-navy/20 shadow-[0_0_20px_rgba(1,37,125,0.15)]' 
-                    : 'border-white/5 bg-white/[0.01] hover:border-white/10 hover:bg-white/[0.03]'
+                    ? 'border-brand-purple/40 bg-brand-purple/10 shadow-[0_4px_20px_rgba(0,0,0,0.02)]' 
+                    : 'border-black/5 bg-black/[0.01] hover:border-black/10 hover:bg-black/[0.02]'
                 }`}
               >
                 {isSelected && (
                   <motion.div 
                     layoutId="activeTabGlow"
-                    className="absolute inset-0 rounded-xl border border-brand-electric/50 pointer-events-none"
+                    className="absolute inset-0 rounded-xl border border-brand-purple/60 pointer-events-none"
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />
                 )}
-                <span className={`text-xs block font-mono mb-2 ${isSelected ? 'text-brand-electric' : 'text-gray-500'}`}>
+                <span className={`text-xs block font-mono mb-2 ${isSelected ? 'text-brand-darkText font-bold' : 'text-neutral-400'}`}>
                   {service.category.split(' / ')[0]}
                 </span>
-                <span className={`text-base font-bold transition-colors ${isSelected ? 'text-white' : 'text-gray-400 group-hover:text-white'}`}>
+                <span className={`text-base font-bold ${isSelected ? 'text-brand-darkText' : 'text-neutral-500'}`}>
                   {service.category.split(' / ')[1]}
                 </span>
               </button>
@@ -145,52 +125,40 @@ export default function Services() {
           })}
         </div>
 
-        {/* RIGHT COLUMN: Dynamic Visual Sub-Structure Workspace */}
-        <div className="lg:col-span-8 p-8 md:p-12 rounded-2xl border border-white/5 bg-gradient-to-b from-white/[0.02] to-transparent backdrop-blur-sm relative min-h-[600px]">
+        <div className="lg:col-span-8 p-8 md:p-12 rounded-2xl border border-black/5 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.02)] min-h-[580px]">
           <AnimatePresence mode="wait">
             {finalServicesStructure.map((service) => {
               if (service.id !== activeCategory) return null;
               return (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, x: 20, y: 10 }}
-                  animate={{ opacity: 1, x: 0, y: 0 }}
-                  exit={{ opacity: 0, x: -20, y: -10 }}
-                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
                   className="space-y-8"
                 >
-                  {/* Category Title Header Area */}
                   <div>
-                    <h3 className="text-2xl md:text-3xl font-black text-white mb-3 tracking-tight">
+                    <h3 className="text-2xl md:text-3xl font-black text-brand-darkText mb-3">
                       {service.title}
                     </h3>
-                    <p className="text-sm md:text-base text-gray-400 font-light leading-relaxed max-w-2xl">
+                    <p className="text-sm md:text-base text-neutral-600 font-light leading-relaxed">
                       {service.description}
                     </p>
                   </div>
 
-                  {/* Nested Detailed Sub-Services Loops */}
-                  <div className="border-t border-white/10 pt-8 space-y-6">
+                  <div className="border-t border-black/10 pt-8 space-y-6">
                     {service.subServices.map((sub, idx) => (
-                      <motion.div 
-                        initial={{ opacity: 0, y: 15 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: idx * 0.08, duration: 0.4 }}
-                        key={idx} 
-                        className="group/item flex gap-4 items-start border-b border-white/5 pb-5 last:border-0 last:pb-0"
-                      >
-                        {/* Status Light Dot Indicator */}
-                        <div className="w-2 h-2 rounded-full bg-brand-electric mt-2 group-hover/item:scale-150 transition-transform shadow-[0_0_8px_#00FFFF]" />
-                        
+                      <div key={idx} className="group flex gap-4 items-start border-b border-black/5 pb-5 last:border-0 last:pb-0">
+                        <div className="w-1.5 h-1.5 rounded-full bg-brand-purple mt-2 shadow-[0_0_8px_#C5ADC5]" />
                         <div>
-                          <h4 className="text-md font-bold text-white group-hover/item:text-brand-electric transition-colors duration-200">
+                          <h4 className="text-md font-bold text-brand-darkText group-hover:text-brand-steel transition-colors">
                             {sub.name}
                           </h4>
-                          <p className="text-xs md:text-sm text-gray-400 font-light leading-relaxed mt-1.5">
+                          <p className="text-xs md:text-sm text-neutral-600 font-light mt-1.5 leading-relaxed">
                             {sub.details}
                           </p>
                         </div>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
                 </motion.div>
