@@ -12,7 +12,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section className="py-24 border-t border-black/5 bg-gradient-to-b from-brand-lightBg to-neutral-50 relative">
+    <section className="py-24 border-t border-white/5 bg-gradient-to-b from-brand-darkBg to-black/40 relative">
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="mb-16">
@@ -20,7 +20,7 @@ export default function Process() {
             initial={{ opacity: 0, x: -15 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="text-xs font-bold tracking-widest text-brand-darkText uppercase bg-brand-purple/20 px-4 py-2 rounded-full border border-brand-purple/40 inline-block"
+            className="text-xs font-bold tracking-widest text-brand-electric uppercase bg-brand-electric/10 px-4 py-2 rounded-full border border-brand-electric/20 inline-block"
           >
             Execution Flow
           </motion.span>
@@ -30,12 +30,12 @@ export default function Process() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-3xl md:text-5xl font-bold tracking-tight mt-6 text-brand-darkText"
+            className="text-3xl md:text-5xl font-bold tracking-tight mt-6 text-white"
           >
             {"How We Bring Ideas "}
             <br />
             {"To "}
-            <span className="text-brand-steel">Digital Reality</span>
+            <span className="text-brand-electric">Digital Reality</span>
           </motion.h2>
         </div>
 
@@ -43,15 +43,15 @@ export default function Process() {
           {steps.map((step, index) => (
             <motion.div
               key={index}
-              className="relative p-6 border-l border-black/10 md:border-l-0 md:border-t pt-8 group hover:border-brand-purple transition-colors duration-300"
+              className="relative p-6 border-l border-white/10 md:border-l-0 md:border-t pt-8 group hover:border-brand-electric transition-colors duration-300"
             >
-              <div className="text-5xl font-black text-black/[0.03] group-hover:text-brand-purple/10 transition-colors duration-300 absolute top-2 right-4 select-none font-mono">
+              <div className="text-5xl font-black text-white/[0.02] group-hover:text-brand-electric/5 transition-colors duration-300 absolute top-2 right-4 select-none font-mono">
                 {step.phase}
               </div>
-              <h3 className="text-lg font-bold text-brand-darkText group-hover:text-brand-purple transition-colors duration-300">
+              <h3 className="text-lg font-bold text-white group-hover:text-brand-electric transition-colors duration-300">
                 {step.name}
               </h3>
-              <p className="mt-3 text-sm text-neutral-600 font-light leading-relaxed">
+              <p className="mt-3 text-sm text-gray-400 font-light leading-relaxed">
                 {step.details}
               </p>
             </motion.div>

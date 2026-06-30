@@ -11,12 +11,12 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="about" className="py-24 border-t border-black/5 bg-brand-lightBg relative overflow-hidden">
+    <section id="about" className="py-24 border-t border-white/5 bg-brand-darkBg relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="mb-24 text-center">
-          <p className="text-xs font-semibold tracking-widest text-neutral-400 uppercase mb-6">Our Powerhouse Tech Stack</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 font-mono text-sm text-neutral-500 font-bold">
+          <p className="text-xs font-semibold tracking-widest text-gray-500 uppercase mb-6">Our Powerhouse Tech Stack</p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 font-mono text-sm text-gray-400 font-bold">
             <span>NEXT.JS 15</span>
             <span>FRAMER MOTION</span>
             <span>TAILWIND V4</span>
@@ -26,11 +26,11 @@ export default function Features() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
           <div>
-            <span className="text-xs font-bold tracking-widest text-brand-purple uppercase bg-brand-purple/20 px-4 py-2 rounded-full border border-brand-purple/40">
+            <span className="text-xs font-bold tracking-widest text-brand-electric uppercase bg-brand-electric/10 px-4 py-2 rounded-full border border-brand-electric/20">
               Why Work With Us
             </span>
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mt-6 text-brand-darkText">
-              We engineer digital <span className="text-brand-steel">superiority</span>.
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mt-6 text-white">
+              We engineer digital <span className="text-brand-navy">superiority</span>.
             </h2>
           </div>
 
@@ -38,10 +38,10 @@ export default function Features() {
             {features.map((feat, index) => (
               <motion.div
                 key={index}
-                className="p-8 border border-black/5 bg-black/[0.01] rounded-2xl hover:border-brand-purple/40 transition-all duration-300"
+                className="p-8 border border-white/5 bg-white/[0.01] rounded-2xl hover:border-brand-electric/30 transition-all duration-300"
               >
-                <h3 className="text-lg font-bold text-brand-darkText mb-3">{feat.title}</h3>
-                <p className="text-sm text-neutral-600 font-light leading-relaxed">{feat.desc}</p>
+                <h3 className="text-lg font-bold text-white mb-3">{feat.title}</h3>
+                <p className="text-sm text-gray-400 font-light leading-relaxed">{feat.desc}</p>
               </motion.div>
             ))}
           </div>

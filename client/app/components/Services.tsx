@@ -84,11 +84,11 @@ export default function Services() {
   return (
     <section id="services" className="py-32 max-w-7xl mx-auto px-6 relative">
       <div className="mb-20">
-        <span className="text-xs font-bold tracking-widest text-brand-darkText uppercase bg-brand-purple/20 px-4 py-2 rounded-full border border-brand-purple/40">
+        <span className="text-xs font-bold tracking-widest text-brand-electric uppercase bg-brand-electric/10 px-4 py-2 rounded-full border border-brand-electric/20">
           Operational Blueprint
         </span>
-        <h2 className="text-4xl md:text-6xl font-black tracking-tight mt-6 text-brand-darkText">
-          Engineered Services. <br />Structured for <span className="text-brand-steel">Scale</span>.
+        <h2 className="text-4xl md:text-6xl font-black tracking-tight mt-6 text-white">
+          Engineered Services. <br />Structured for <span className="text-brand-electric">Scale</span>.
         </h2>
       </div>
 
@@ -103,21 +103,21 @@ export default function Services() {
                 onClick={() => setActiveCategory(service.id)}
                 className={`w-full text-left p-6 rounded-xl border transition-all duration-300 relative cursor-pointer ${
                   isSelected 
-                    ? 'border-brand-purple/40 bg-brand-purple/10 shadow-[0_4px_20px_rgba(0,0,0,0.02)]' 
-                    : 'border-black/5 bg-black/[0.01] hover:border-black/10 hover:bg-black/[0.02]'
+                    ? 'border-brand-electric/30 bg-brand-navy/20 shadow-[0_0_20px_rgba(0,255,255,0.05)]' 
+                    : 'border-white/5 bg-white/[0.01] hover:border-white/10 hover:bg-white/[0.02]'
                 }`}
               >
                 {isSelected && (
                   <motion.div 
                     layoutId="activeTabGlow"
-                    className="absolute inset-0 rounded-xl border border-brand-purple/60 pointer-events-none"
+                    className="absolute inset-0 rounded-xl border border-brand-electric/50 pointer-events-none"
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />
                 )}
-                <span className={`text-xs block font-mono mb-2 ${isSelected ? 'text-brand-darkText font-bold' : 'text-neutral-400'}`}>
+                <span className={`text-xs block font-mono mb-2 ${isSelected ? 'text-brand-electric font-bold' : 'text-gray-500'}`}>
                   {service.category.split(' / ')[0]}
                 </span>
-                <span className={`text-base font-bold ${isSelected ? 'text-brand-darkText' : 'text-neutral-500'}`}>
+                <span className={`text-base font-bold ${isSelected ? 'text-white' : 'text-gray-400'}`}>
                   {service.category.split(' / ')[1]}
                 </span>
               </button>
@@ -125,7 +125,7 @@ export default function Services() {
           })}
         </div>
 
-        <div className="lg:col-span-8 p-8 md:p-12 rounded-2xl border border-black/5 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.02)] min-h-[580px]">
+        <div className="lg:col-span-8 p-8 md:p-12 rounded-2xl border border-white/5 bg-gradient-to-b from-white/[0.02] to-transparent backdrop-blur-sm min-h-[580px]">
           <AnimatePresence mode="wait">
             {finalServicesStructure.map((service) => {
               if (service.id !== activeCategory) return null;
@@ -138,23 +138,23 @@ export default function Services() {
                   className="space-y-8"
                 >
                   <div>
-                    <h3 className="text-2xl md:text-3xl font-black text-brand-darkText mb-3">
+                    <h3 className="text-2xl md:text-3xl font-black text-white mb-3">
                       {service.title}
                     </h3>
-                    <p className="text-sm md:text-base text-neutral-600 font-light leading-relaxed">
+                    <p className="text-sm md:text-base text-gray-400 font-light leading-relaxed">
                       {service.description}
                     </p>
                   </div>
 
-                  <div className="border-t border-black/10 pt-8 space-y-6">
-                    {service.subServices.map((sub, idx) => (
-                      <div key={idx} className="group flex gap-4 items-start border-b border-black/5 pb-5 last:border-0 last:pb-0">
-                        <div className="w-1.5 h-1.5 rounded-full bg-brand-purple mt-2 shadow-[0_0_8px_#C5ADC5]" />
+                  <div className="border-t border-white/10 pt-8 space-y-6">
+                    {finalServicesStructure.find(s => s.id === activeCategory)?.subServices.map((sub, idx) => (
+                      <div key={idx} className="group flex gap-4 items-start border-b border-white/5 pb-5 last:border-0 last:pb-0">
+                        <div className="w-1.5 h-1.5 rounded-full bg-brand-electric mt-2 shadow-[0_0_8px_#00FFFF]" />
                         <div>
-                          <h4 className="text-md font-bold text-brand-darkText group-hover:text-brand-steel transition-colors">
+                          <h4 className="text-md font-bold text-white group-hover:text-brand-electric transition-colors">
                             {sub.name}
                           </h4>
-                          <p className="text-xs md:text-sm text-neutral-600 font-light mt-1.5 leading-relaxed">
+                          <p className="text-xs md:text-sm text-gray-400 font-light mt-1.5 leading-relaxed">
                             {sub.details}
                           </p>
                         </div>
