@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* Enforce proper production deployment path resolution */
+  /* Enforce smooth routing on production environments */
   trailingSlash: false,
 };
 
