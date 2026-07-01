@@ -17,10 +17,12 @@ export default function Features() {
         <div className="mb-24 text-center">
           <p className="text-xs font-semibold tracking-widest text-gray-500 uppercase mb-6">Our Powerhouse Tech Stack</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 font-mono text-sm text-gray-400 font-bold">
-            <span>NEXT.JS 15</span>
+            <span>HTML/CSS/JS</span>\
+            <span>NEXT.JS</span>
             <span>FRAMER MOTION</span>
             <span>TAILWIND V4</span>
             <span>PYTHON APIS</span>
+             <span>DATABASES</span>
           </div>
         </div>
 
