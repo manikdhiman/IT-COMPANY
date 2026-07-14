@@ -1,24 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-navy: #01257D;      /* Core corporate identity navy */
-  --color-brand-electric: #0066FF;  /* Accessible tech blue for perfect contrast */
-  --color-brand-cyan: #00A3B8;      /* Balanced clean cyan elements */
-  --color-brand-darkText: #09132C;  /* Ultra high-contrast crisp heading gray */
+  --color-brand-navy: #01257D;
+  --color-brand-electric: #00FFFF;
+  --color-brand-darkBg: #0B0D13; /* Primary Premium Obsidian Slate Dark Canvas */
 }
 
+/* Enforcing hard logic across the entire tree framework */
 html, body {
-  background-color: #FAFCFF !important;
-  color: #09132C !important; /* 100% perfectly visible text */
+  background-color: #0B0D13 !important;
+  color: #FFFFFF !important; /* Strictly sharp premium white text globally */
   font-family: system-ui, -apple-system, sans-serif;
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
 }
 
-/* Technical Professional Corporate Micro-Grid */
-.tech-clean-bg {
-  background-color: #FAFCFF;
-  background-image: radial-gradient(#E2E8F5 1px, transparent 1px);
-  background-size: 24px 24px;
+/* High-tech tech ambient glow layer */
+.tech-glow-matrix {
+  background: radial-gradient(circle at 50% 50%, rgba(1, 37, 125, 0.3) 0%, rgba(0, 255, 255, 0.08) 60%, rgba(11, 13, 19, 0) 100%);
+  filter: blur(100px);
 }

@@ -11,7 +11,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="about" className="py-24 border-t border-white/5 bg-[#0B0D13] relative overflow-hidden">
+    <section id="about" className="py-24 border-t border-white/5 bg-[#0B0D13] relative overflow-hidden text-white">
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="mb-24 text-center">
@@ -21,16 +21,18 @@ export default function Features() {
             <span>FRAMER MOTION</span>
             <span>TAILWIND V4</span>
             <span>PYTHON APIS</span>
+            <span>DIGITAL MARKETING</span>
+            <span> SEARCH ENGINE OPTIMIZATIONS</span>
           </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
           <div>
-            <span className="text-xs font-bold tracking-widest text-brand-electric uppercase bg-brand-electric/10 px-4 py-2 rounded-full border border-brand-electric/20">
+            <span className="text-xs font-bold tracking-widest text-[#00FFFF] uppercase bg-[#00FFFF]/10 px-4 py-2 rounded-full border border-[#00FFFF]/20">
               Why Work With Us
             </span>
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mt-6 text-white">
-              We engineer digital <span className="text-brand-electric">superiority</span>.
+            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mt-6 text-white">
+              We engineer digital <span className="text-[#00FFFF]">superiority</span>.
             </h2>
           </div>
 
@@ -38,7 +40,7 @@ export default function Features() {
             {features.map((feat, index) => (
               <motion.div
                 key={index}
-                className="p-8 border border-white/5 bg-white/[0.02] backdrop-blur-sm rounded-2xl hover:border-brand-electric/30 transition-all duration-300"
+                className="p-8 border border-white/5 bg-white/[0.02] backdrop-blur-md rounded-2xl hover:border-[#00FFFF]/30 transition-all duration-300 shadow-xl"
               >
                 <h3 className="text-lg font-bold text-white mb-3">{feat.title}</h3>
                 <p className="text-sm text-gray-400 font-light leading-relaxed">{feat.desc}</p>
