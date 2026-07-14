@@ -103,7 +103,7 @@ export default function Services() {
                 onClick={() => setActiveCategory(service.id)}
                 className={`w-full text-left p-6 rounded-xl border transition-all duration-300 relative cursor-pointer ${
                   isSelected 
-                    ? 'border-brand-electric/30 bg-brand-navy/20 shadow-[0_0_20px_rgba(0,255,255,0.05)]' 
+                    ? 'border-brand-electric/40 bg-brand-navy/30 shadow-[0_0_20px_rgba(0,255,255,0.08)]' 
                     : 'border-white/5 bg-white/[0.01] hover:border-white/10 hover:bg-white/[0.02]'
                 }`}
               >
@@ -147,7 +147,7 @@ export default function Services() {
                   </div>
 
                   <div className="border-t border-white/10 pt-8 space-y-6">
-                    {finalServicesStructure.find(s => s.id === activeCategory)?.subServices.map((sub, idx) => (
+                    {service.subServices.map((sub, idx) => (
                       <div key={idx} className="group flex gap-4 items-start border-b border-white/5 pb-5 last:border-0 last:pb-0">
                         <div className="w-1.5 h-1.5 rounded-full bg-brand-electric mt-2 shadow-[0_0_8px_#00FFFF]" />
                         <div>

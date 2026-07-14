@@ -7,12 +7,7 @@ import ContactFooter from './components/ContactFooter';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#0B0F19] text-white selection:bg-[#00FFFF] selection:text-[#0B0F19] relative overflow-hidden">
-      
-      {/* High-Tech Cyber Ambient Lighting Layers */}
-      <div className="absolute top-[-10%] left-[-15%] w-[1000px] h-[1000px] cyber-glow pointer-events-none z-0" />
-      <div className="absolute bottom-[15%] right-[-15%] w-[800px] h-[800px] cyber-glow pointer-events-none z-0" />
-
+    <div className="min-h-screen tech-clean-bg text-[#09132C] selection:bg-[#01257D] selection:text-white relative overflow-hidden">
       <div className="relative z-10">
         <Navbar />
         <main>

@@ -12,7 +12,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           className="text-xs font-bold tracking-widest text-brand-electric uppercase bg-brand-electric/10 px-4 py-2 rounded-full border border-brand-electric/20"
         >
-          Next-Gen Digital Agency
+          Next-Gen Digital Solutions
         </motion.span>
         
         <motion.h1 
@@ -22,7 +22,7 @@ export default function Hero() {
           className="text-4xl md:text-7xl font-extrabold tracking-tight mt-6 leading-[1.1] text-white"
         >
           Transforming Ideas into <br />
-          <span className="bg-gradient-to-r from-white via-blue-300 to-brand-electric bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-white via-blue-400 to-brand-electric bg-clip-text text-transparent">
             High-Performance
           </span> Digital Experiences.
         </motion.h1>
@@ -43,10 +43,10 @@ export default function Hero() {
           className="mt-10 flex flex-wrap justify-center gap-4"
         >
           <motion.a 
-            whileHover={{ scale: 1.03, boxShadow: "0px 0px 30px rgba(0, 255, 255, 0.4)" }}
+            whileHover={{ scale: 1.03, boxShadow: "0px 0px 30px rgba(0, 255, 255, 0.35)" }}
             whileTap={{ scale: 0.98 }}
             href="#services" 
-            className="bg-brand-electric text-brand-darkBg font-bold px-8 py-4 rounded-xl shadow-[0_0_25px_rgba(0,255,255,0.2)] transition-shadow"
+            className="bg-brand-electric text-brand-darkBg font-bold px-8 py-4 rounded-xl shadow-lg transition-shadow"
           >
             Explore Services
           </motion.a>

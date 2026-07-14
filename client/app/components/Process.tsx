@@ -12,7 +12,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section className="py-24 border-t border-white/5 bg-gradient-to-b from-brand-darkBg to-black/40 relative">
+    <section className="py-24 border-t border-[#E2E8F5] bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="mb-16">
@@ -20,7 +20,7 @@ export default function Process() {
             initial={{ opacity: 0, x: -15 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="text-xs font-bold tracking-widest text-brand-electric uppercase bg-brand-electric/10 px-4 py-2 rounded-full border border-brand-electric/20 inline-block"
+            className="text-xs font-bold tracking-widest text-[#01257D] uppercase bg-[#01257D]/5 px-4 py-2 rounded-full border border-[#01257D]/10 inline-block"
           >
             Execution Flow
           </motion.span>
@@ -30,12 +30,9 @@ export default function Process() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-3xl md:text-5xl font-bold tracking-tight mt-6 text-white"
+            className="text-3xl md:text-5xl font-black tracking-tight mt-6 text-[#09132C]"
           >
-            {"How We Bring Ideas "}
-            <br />
-            {"To "}
-            <span className="text-brand-electric">Digital Reality</span>
+            How We Bring Ideas <br />To <span className="text-[#01257D]">Digital Reality</span>
           </motion.h2>
         </div>
 
@@ -43,15 +40,26 @@ export default function Process() {
           {steps.map((step, index) => (
             <motion.div
               key={index}
-              className="relative p-6 border-l border-white/10 md:border-l-0 md:border-t pt-8 group hover:border-brand-electric transition-colors duration-300"
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.05 }}
+              className="relative p-8 border border-[#E2E8F5] bg-[#FAFCFF] rounded-2xl group hover:border-[#01257D] hover:bg-white transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.01)] hover:shadow-[0_10px_30px_rgba(1,37,125,0.05)]"
             >
-              <div className="text-5xl font-black text-white/[0.02] group-hover:text-brand-electric/5 transition-colors duration-300 absolute top-2 right-4 select-none font-mono">
+              {/* Massive subtle tech watermark numbers */}
+              <div className="text-6xl font-black text-[#01257D]/[0.03] group-hover:text-[#01257D]/[0.05] transition-colors duration-300 absolute top-2 right-4 select-none font-mono">
                 {step.phase}
               </div>
-              <h3 className="text-lg font-bold text-white group-hover:text-brand-electric transition-colors duration-300">
+              
+              <div className="text-[#01257D] font-mono text-xs font-bold mb-4 tracking-widest">
+                PHASE // {step.phase}
+              </div>
+
+              <h3 className="text-lg font-bold text-[#09132C] transition-colors duration-200">
                 {step.name}
               </h3>
-              <p className="mt-3 text-sm text-gray-400 font-light leading-relaxed">
+              
+              <p className="mt-3 text-sm text-[#4A5568] font-normal leading-relaxed">
                 {step.details}
               </p>
             </motion.div>

@@ -1,23 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-navy: #01257D;
-  --color-brand-electric: #00FFFF;
-  --color-brand-darkBg: #0B0F19; /* Deep Cyber Dark Background */
+  --color-brand-navy: #01257D;      /* Core corporate identity navy */
+  --color-brand-electric: #0066FF;  /* Accessible tech blue for perfect contrast */
+  --color-brand-cyan: #00A3B8;      /* Balanced clean cyan elements */
+  --color-brand-darkText: #09132C;  /* Ultra high-contrast crisp heading gray */
 }
 
-/* Enforcing clear tech rules across the DOM tree */
 html, body {
-  background-color: #0B0F19 !important;
-  color: #FFFFFF !important; /* Back to crispy sharp white text */
+  background-color: #FAFCFF !important;
+  color: #09132C !important; /* 100% perfectly visible text */
   font-family: system-ui, -apple-system, sans-serif;
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
 }
 
-/* High-tech matrix cyber ambient glow */
-.cyber-glow {
-  background: radial-gradient(circle at 50% 50%, rgba(1, 37, 125, 0.25) 0%, rgba(0, 255, 255, 0.05) 50%, rgba(11, 15, 25, 0) 100%);
-  filter: blur(100px);
+/* Technical Professional Corporate Micro-Grid */
+.tech-clean-bg {
+  background-color: #FAFCFF;
+  background-image: radial-gradient(#E2E8F5 1px, transparent 1px);
+  background-size: 24px 24px;
 }

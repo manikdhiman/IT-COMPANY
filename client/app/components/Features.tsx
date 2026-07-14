@@ -11,18 +11,16 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="about" className="py-24 border-t border-white/5 bg-brand-darkBg relative overflow-hidden">
+    <section id="about" className="py-24 border-t border-white/5 bg-[#0B0D13] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="mb-24 text-center">
           <p className="text-xs font-semibold tracking-widest text-gray-500 uppercase mb-6">Our Powerhouse Tech Stack</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 font-mono text-sm text-gray-400 font-bold">
-            <span>HTML/CSS/JS</span>\
-            <span>NEXT.JS</span>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 font-mono text-sm text-gray-400 opacity-40 font-bold">
+            <span>NEXT.JS 15</span>
             <span>FRAMER MOTION</span>
             <span>TAILWIND V4</span>
             <span>PYTHON APIS</span>
-             <span>DATABASES</span>
           </div>
         </div>
 
@@ -32,7 +30,7 @@ export default function Features() {
               Why Work With Us
             </span>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight mt-6 text-white">
-              We engineer digital <span className="text-brand-navy">superiority</span>.
+              We engineer digital <span className="text-brand-electric">superiority</span>.
             </h2>
           </div>
 
@@ -40,7 +38,7 @@ export default function Features() {
             {features.map((feat, index) => (
               <motion.div
                 key={index}
-                className="p-8 border border-white/5 bg-white/[0.01] rounded-2xl hover:border-brand-electric/30 transition-all duration-300"
+                className="p-8 border border-white/5 bg-white/[0.02] backdrop-blur-sm rounded-2xl hover:border-brand-electric/30 transition-all duration-300"
               >
                 <h3 className="text-lg font-bold text-white mb-3">{feat.title}</h3>
                 <p className="text-sm text-gray-400 font-light leading-relaxed">{feat.desc}</p>
